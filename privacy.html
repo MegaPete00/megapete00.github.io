@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Privacy Policy | House of Hoss</title>
+<meta name="description" content="How House of Hoss games handle your data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Big+Shoulders+Display:wght@800;900&display=swap">
+<style>
+/* Layout: one reading column under a black bar strung with ring ropes, same system as the games. */
+:root{
+  --canvas:#E8EBF0; --panel:#FFFFFF; --ink:#141823; --muted:#576072; --line:#CDD3DD; --well:#DFE3EA;
+  --bar:#141823; --bar-ink:#F2F4F8; --bar-muted:#98A1B3;
+  --rope-r:#C8232F; --rope-w:#F2F4F8; --rope-b:#2147A8; --gold:#CE9C35; --gold-ink:#2A1B03; --focus:#2147A8;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --f-label:"Barlow Condensed","Arial Narrow",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --canvas:#0D111A; --panel:#151B27; --ink:#E7EAF0; --muted:#8C95A7; --line:#262E3F; --well:#1E2534;
+  --bar:#05070C; --bar-ink:#E7EAF0; --bar-muted:#7C8597;
+  --rope-r:#D9414B; --rope-w:#D3D8E2; --rope-b:#4A72D6; --gold:#E2BC5C; --gold-ink:#231604; --focus:#7B9BF2; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --canvas:#0D111A; --panel:#151B27; --ink:#E7EAF0; --muted:#8C95A7; --line:#262E3F; --well:#1E2534;
+  --bar:#05070C; --bar-ink:#E7EAF0; --bar-muted:#7C8597;
+  --rope-r:#D9414B; --rope-w:#D3D8E2; --rope-b:#4A72D6; --gold:#E2BC5C; --gold-ink:#231604; --focus:#7B9BF2; color-scheme:dark }
+*,*::before,*::after{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--canvas);color:var(--ink);font:16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+a{color:var(--ink);text-underline-offset:3px}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+.wrap{max-width:40rem;margin-inline:auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.bar{background:var(--bar);color:var(--bar-ink)}
+.bar .wrap{padding-block:18px 14px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mark{margin:0;font-family:var(--f-display);font-weight:900;font-size:1.6rem;line-height:.9;text-transform:uppercase;letter-spacing:.01em}
+.mark a{color:inherit;text-decoration:none}
+.crumb{font-family:var(--f-label);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bar-muted)}
+.crumb a{color:var(--bar-ink)}
+.ropes{display:grid;gap:4px;padding-bottom:8px;background:var(--bar)}
+.ropes i{display:block;height:4px} .ropes i:nth-child(1){background:var(--rope-r)} .ropes i:nth-child(2){background:var(--rope-w)} .ropes i:nth-child(3){background:var(--rope-b)}
+main{display:grid;gap:22px;padding-block:28px 56px}
+h1{margin:0;font-family:var(--f-display);font-weight:900;font-size:clamp(2.4rem,10vw,3.6rem);line-height:.92;text-transform:uppercase;text-wrap:balance}
+h2{margin:8px 0 0;font-family:var(--f-label);font-weight:700;font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase}
+p,li{max-width:65ch} p{margin:0} ul,ol{margin:0;padding-left:1.2rem;display:grid;gap:6px}
+.lede{font-size:1.12rem;color:var(--muted)}
+.eyebrow{font-family:var(--f-label);font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.fine{font-size:.88rem;color:var(--muted)}
+.games{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr))}
+.game{display:grid;gap:10px;align-content:start;padding:18px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}
+.game h3{margin:0;font-family:var(--f-display);font-weight:900;font-size:2rem;line-height:.95;text-transform:uppercase}
+.game .tag{justify-self:start;font-family:var(--f-label);font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--gold);color:var(--gold-ink)}
+.game.soon{background:transparent;border-style:dashed} .game.soon h3{color:var(--muted)}
+.play{justify-self:start;display:inline-block;padding:10px 18px;border-radius:10px;background:var(--ink);color:var(--panel);text-decoration:none;font-family:var(--f-label);font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.chips li{display:flex;align-items:center;gap:7px;font-size:.95rem}
+.sq{display:inline-block;width:14px;height:14px;border-radius:3px} .hit{background:#1B7F46} .near{background:#B88412} .miss{background:#C8232F}
+footer{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:6px;font-size:.88rem;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap"><p class="mark"><a href="/">House of Hoss</a></p><span class="crumb">Privacy</span></div>
+  <div class="ropes" aria-hidden="true"><i></i><i></i><i></i></div>
+</header>
+<main class="wrap">
+
+<section style="display:grid;gap:12px">
+  <h1>Privacy Policy</h1>
+  <p class="fine">Last updated October 27, 2026. This policy covers houseofhoss.com and every game on it.</p>
+</section>
+<h2>The short version</h2>
+<ul>
+  <li>There are no accounts. We don't ask for your name, email or anything else about you.</li>
+  <li>Your game progress and stats are saved in your own browser, not on our servers.</li>
+  <li>We show ads from Google, which uses cookies to choose and measure ads.</li>
+</ul>
+<h2>What your browser stores</h2>
+<p>Games save today's guesses, your streaks and your stats in your browser's local storage so they're there when you come back. This data never leaves your device and we can't see it. Clearing your browser data deletes it.</p>
+<h2>Hosting</h2>
+<p>The site is hosted on GitHub Pages. Like most web hosts, GitHub may log technical information such as IP addresses for security and operations. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+<h2>Advertising</h2>
+<ul>
+  <li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</li>
+  <li>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this site and/or other sites on the Internet.</li>
+  <li>You can opt out of personalized advertising in <a href="https://adssettings.google.com">Google Ads Settings</a>, or opt out of some third-party vendors' use of cookies at <a href="https://www.aboutads.info/choices/">aboutads.info</a>.</li>
+  <li>Learn more about <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites that use its services</a>.</li>
+</ul>
+<p>Visitors in the European Economic Area, the UK and Switzerland are asked for consent before personalized ads are shown.</p>
+<h2>Sponsors and links</h2>
+<p>Some pages may include sponsor messages or links to other sites. Those sites have their own privacy policies.</p>
+<h2>Children</h2>
+<p>House of Hoss is not directed at children under 13, and we don't knowingly collect personal information from them.</p>
+<h2>Changes and contact</h2>
+<p>If this policy changes, the date at the top changes with it. Questions: <a href="mailto:contact@houseofhoss.com">contact@houseofhoss.com</a>.</p>
+
+<footer>
+  <nav aria-label="Site"><a href="/">Home</a><a href="/titlerun/">Title Run</a><a href="/privacy.html">Privacy</a><a href="mailto:contact@houseofhoss.com">Contact</a></nav>
+  <p>House of Hoss games are fan-made and not affiliated with or endorsed by WWE, AEW, TNA, NWA or any other promotion.</p>
+  <p>Contact: contact@houseofhoss.com</p>
+</footer>
+</main>
+</body>
+</html>
